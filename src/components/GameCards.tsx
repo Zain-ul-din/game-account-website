@@ -45,7 +45,7 @@ export default function GameCards({
     {/* overlay */}
     {!showMore && <div className="absolute flex justify-center items-end bottom-0 w-full" style={{
       height: `${cardHeight+1}px`,
-      background: 'linear-gradient(to bottom, rgba(255,255,255,0.01), white 90%)',
+      background: 'linear-gradient(to bottom, rgba(255,255,255,0.5), white 90%)',
       pointerEvents: 'none'
     }}>
       <Button className="mb-5" style={{
