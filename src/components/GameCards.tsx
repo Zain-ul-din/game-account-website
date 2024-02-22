@@ -26,11 +26,7 @@ export default function GameCards({
     else if(containerWidth <= 950) setGridCol(4)
     else setGridCol(5)
 
-    if(showMore) {
-      setCardHeight(Infinity)
-      return;
-    }
-
+    if(showMore) return;
     const topTwoItems = containerRef.current.querySelectorAll('a');
     setCardHeight(Array.from(topTwoItems)[0].clientHeight);
   }, [containerRef, width, height, showMore])
@@ -38,13 +34,12 @@ export default function GameCards({
   useEffect(()=> handleResponseLayout(), [containerRef, width, height, showMore])
   const containerMaxHeight = useMemo(()=> (cardHeight * 3) + (16 * 3), [cardHeight])
   
-
   return <div 
     className={`grid gap-4 relative`}
     style={{
       gridTemplateColumns: `repeat(${gridCol}, minmax(0, 1fr))`,
-      maxHeight: `${containerMaxHeight}px`,
-      overflow: 'hidden'
+      overflow: 'hidden',
+      ...(showMore ? {} : { maxHeight: `${containerMaxHeight}px` })
     }}
   >
     {/* overlay */}
