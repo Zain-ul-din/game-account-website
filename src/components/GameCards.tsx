@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { MutableRefObject, useEffect, useMemo, useState } from "react";
+import { MutableRefObject, useCallback, useEffect, useMemo, useState } from "react";
 import { useWindowSize } from "usehooks-ts";
 import { Button } from "./ui/button";
 import { Gamepad2 } from "lucide-react";
@@ -19,7 +19,7 @@ export default function GameCards({
   const [cardHeight, setCardHeight] = useState<number>(Infinity)
   const [showMore, setShowMore] = useState<boolean>(false);
 
-  useEffect(()=> {
+  const handleResponseLayout = useCallback(()=> {
     if(containerRef.current == null) return;
     let containerWidth = containerRef.current.clientWidth;
     if(containerWidth <= 550) setGridCol(3)
@@ -32,11 +32,12 @@ export default function GameCards({
     }
 
     const topTwoItems = containerRef.current.querySelectorAll('a');
-    setCardHeight(Array.from(topTwoItems)[0].clientHeight);1
+    setCardHeight(Array.from(topTwoItems)[0].clientHeight);
   }, [containerRef, width, height, showMore])
 
+  useEffect(()=> handleResponseLayout(), [containerRef, width, height, showMore])
   const containerMaxHeight = useMemo(()=> (cardHeight * 3) + (16 * 3), [cardHeight])
-
+  
 
   return <div 
     className={`grid gap-4 relative`}
@@ -69,7 +70,9 @@ export default function GameCards({
         }}
         href="https://www.google.com"
       >
-        <img src="/images/games/slowmo.webp" alt="foo" width={'100%'}  />
+        <img src="/images/games/slowmo.webp" alt="foo" width={'100%'}  
+          onLoad={()=> handleResponseLayout()}
+        />
         <div className="py-2 px-2">
           <h1 className="truncate font-semibold md:text-sm text-xs">
           Indian Bike Gangster Simulator
