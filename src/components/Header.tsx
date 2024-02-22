@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 
 export default function Header() {
-  return <header className={`w-full  bg-gray-200`}>
-    <div className="flex flex-wrap gap-5 md:flex-nowrap md:gap-0  py-6 px-4 max-w-screen-xl mx-auto items-center">
+  return <header className={`w-full bg-gray-100`}>
+    <div className="flex flex-wrap justify-center gap-5 md:justify-start md:flex-nowrap md:gap-0  py-6 px-4 max-w-screen-xl mx-auto items-center">
       <h1 className="font-bold text-xl">HIT BOX</h1>
 
       {/* Links */}
