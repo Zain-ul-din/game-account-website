@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 const backTo1982 = LocalFont({
   src: [
     { 
-      path: '../../public/fonts/BACKTO1982.ttf',
+      path: '../../public/fonts/BACKTO1982.TTF',
       weight: '400'
     }
   ],
