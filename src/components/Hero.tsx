@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 export default function Hero() {
   return <>
-    <div className="w-full bg-gray-100 flex-1">
+    <div className="w-full flex-1">
       <div 
         className="flex w-full h-full px-4 py-28 max-w-screen-xl mx-auto justify-center items-center"
       >

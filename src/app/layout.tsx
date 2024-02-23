@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import LocalFont from "next/font/local";
+import { Oxygen } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
 
-const inter = Inter({ subsets: ["latin"] });
 const backTo1982 = LocalFont({
   src: [
     { 
@@ -14,6 +12,12 @@ const backTo1982 = LocalFont({
     }
   ],
   variable: '--font-back_to_1982'
+})
+
+const oxygenRegular = Oxygen({
+  weight: ['400', '300', '700'],
+  subsets: ['latin-ext'],
+  variable: '--oxygen-font',
 })
 
 export const metadata: Metadata = {
@@ -28,7 +32,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(`${inter.className} w-full h-full`, backTo1982.variable)}>  
+      <body className={cn(`w-full h-full antialiased`, 
+        oxygenRegular.className, 
+        oxygenRegular.variable, 
+        backTo1982.variable)}>  
         {children}
       </body>
     </html>

@@ -1,15 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 
 export default function Header() {
-  return <header className={`w-full bg-gray-100`}>
+  return <header className={`w-full`}>
     <div className="flex flex-wrap justify-center gap-5 md:justify-start md:flex-nowrap md:gap-0  py-6 px-4 max-w-screen-xl mx-auto items-center">
       <h1 className="font-bold text-xl">HIT BOX</h1>
-
+      
       {/* Links */}
       <div className="flex md:ml-8 gap-4">
-        <a className="cursor-pointer text-gray-700 active:text-black hover:underline">Games</a>
-        <a className="cursor-pointer text-gray-700 active:text-black hover:underline">Contact</a>
-        <a className="cursor-pointer text-gray-700 active:text-black hover:underline">About Us</a>
+        <a className="cursor-pointer text-gray-700 active:text-black hover:underline decoration-orange-500 underline decoration-wavy underline-offset-4">Games</a>
+        <a className="cursor-pointer text-gray-700 active:text-black hover:underline decoration-orange-500 decoration-wavy underline-offset-4">Contact</a>
+        <a className="cursor-pointer text-gray-700 active:text-black hover:underline decoration-orange-500 decoration-wavy underline-offset-4">About Us</a>
       </div>
 
       {/* social cards */}

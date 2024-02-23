@@ -75,6 +75,7 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
+        sans: ['var(--oxygen-font)', ...fontFamily.sans],
         'back-to-1982': ["var(--font-back_to_1982)"],
       },
       backgroundImage: {
