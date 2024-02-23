@@ -5,6 +5,7 @@ import { MutableRefObject, useCallback, useEffect, useMemo, useState } from "rea
 import { useWindowSize } from "usehooks-ts";
 import { Button } from "./ui/button";
 import { Gamepad2 } from "lucide-react";
+import { accountGames } from "@/lib/constant";
 
 interface GameCardsProps {
   containerRef: MutableRefObject<HTMLDivElement | null> 
@@ -22,7 +23,7 @@ export default function GameCards({
   const handleResponseLayout = useCallback(()=> {
     if(containerRef.current == null) return;
     let containerWidth = containerRef.current.clientWidth;
-    if(containerWidth <= 550) setGridCol(3)
+    if(containerWidth <= 550) setGridCol(2)
     else if(containerWidth <= 950) setGridCol(4)
     else setGridCol(5)
 
@@ -43,34 +44,47 @@ export default function GameCards({
     }}
   >
     {/* overlay */}
-    {!showMore && <div className="absolute flex justify-center items-end bottom-0 w-full" style={{
-      height: `${cardHeight+1}px`,
-      background: 'linear-gradient(to bottom, rgba(255,255,255,0.5), white 90%)',
-      pointerEvents: 'none'
-    }}>
-      <Button className="mb-5" style={{
-        pointerEvents: 'auto'
-      }} onClick={()=> setShowMore(true)}>
-        <Gamepad2 className="mr-2" />
-        Load More Games
-      </Button>
-    </div>}
+    {!showMore && 
+    <>
+      <div className="absolute flex justify-center items-end bottom-0 w-full" style={{
+        height: `${cardHeight+1}px`,
+        background: 'linear-gradient(to bottom, rgba(255,255,255,0.2), white 90%)',
+        pointerEvents: 'none',
+      }}>
+      </div>
+      <div className="absolute flex justify-center items-end bottom-0 w-full">
+        <Button className="mb-5" style={{
+          pointerEvents: 'auto'
+        }} onClick={()=> setShowMore(true)}>
+          <Gamepad2 className="mr-2" />
+          Load More Games
+        </Button>
+      </div>
+    </>
+    }
 
     {/* cards */}
-    {new Array(15).fill('').map((_, i)=> {
+    {accountGames.map((game, i)=> {
       return <a 
         className="flex flex-col cursor-pointer border border-black shadow-gray-300 hover:shadow-gray-400" key={i}
         style={{
           boxShadow: '3px 3px 0px var(--tw-shadow-color)'
         }}
-        href="https://www.google.com"
+        href={game.src}
+        target="_blank"
       >
-        <img src="/images/games/slowmo.webp" alt="foo" width={'100%'}  
+        <img src={`${game.img}`} 
+          alt={`${game.title} image`} 
+          width={'100%'}  
+          onError={(e)=> {
+            console.log("fail to load");
+            (e.target as HTMLImageElement).src = 'images/games/slowmo.webp'
+          }}
           onLoad={()=> handleResponseLayout()}
         />
         <div className="py-2 px-2">
           <h1 className="truncate font-semibold md:text-sm text-xs">
-          Indian Bike Gangster Simulator
+          {game.title}
           </h1>
           <p className="truncate text-[10px] md:text-xs text-neutral-700">Slow Mo Hero is an interesting drag running game where you can run and fight with people in various action styles. This slow mo game allows you to move your character in slow motion</p>
         </div>
@@ -78,4 +92,3 @@ export default function GameCards({
     })}
   </div>
 }
-
