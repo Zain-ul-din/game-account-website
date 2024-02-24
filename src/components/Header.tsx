@@ -4,38 +4,21 @@
 import React, { useEffect, useRef, useState } from "react"
 import { useWindowSize } from "usehooks-ts";
 
-interface HeaderProps {
-  bannerRef: React.MutableRefObject<HTMLImageElement | null>
-}
 
-export default function Header({
-  bannerRef
-}: HeaderProps) {
+export default function Header() {
 
-  const headerRef = useRef<HTMLImageElement>(null)
+  const bannerRef = useRef<HTMLImageElement>(null)
+  const { width, height} = useWindowSize()
   const [marginTop, setMarginTop] = useState<number>(0)
-  const { width, height } = useWindowSize()
-
+  
   useEffect(()=> {
-    const handleScroll = ()=> {
-      if(!headerRef.current) return;
-      const headerHeight = headerRef.current.clientHeight;
-      const scrollPos = window.scrollY;
-      const diff = headerHeight - scrollPos;
-      setMarginTop(diff <= 0 ? 0 : diff);
-    };
+    if(!bannerRef.current) return;
+    setMarginTop(bannerRef.current.clientHeight);
+  },[width, height, bannerRef])
 
-    handleScroll();
-    window.addEventListener('scroll', handleScroll)
-  },[])
 
-    
   return <>
-  <div className="fixed top-0 left-0 w-full -z-[999]"
-    style={{
-      marginTop: `${marginTop}px`
-    }}
-  >
+  <div className="fixed top-0 left-0 w-full -z-[999]">
     <img 
       ref={bannerRef}
       src='/images/hit-box-banner.webp'
@@ -43,7 +26,7 @@ export default function Header({
       height={'50vh'}
       width={'100%'}
       style={{
-        maxHeight: '480px',
+        maxHeight: '500px',
         objectFit: 'cover',
         backgroundSize: 'contain',
       }}
@@ -52,24 +35,37 @@ export default function Header({
       
   <header 
     className={`w-full bg-white`}
-    ref={headerRef}
+    style={{
+      marginTop: `${marginTop}px`,
+      borderRadius: '1.5rem 1.5rem 0rem 0rem'
+    }}
   >
     <div className="flex flex-wrap justify-center gap-5 md:justify-start md:flex-nowrap md:gap-0  py-6 px-6 max-w-screen-xl mx-auto items-center">
-      <h1 className="font-bold text-xl">HitBox Games</h1>
+      {/* <h1 className="font-bold text-xl">HitBox Games</h1> */}
+      <img 
+        src="/images/hit-box-logo.webp"
+        alt="hitbox_logo"
+        width={50}
+        height={50}
+        style={{
+          borderRadius: '50%'
+        }}
+      />
       
       {/* Links */}
       <div className="flex md:ml-8 gap-4">
-        <a className="cursor-pointer font-semibold active:text-black hover:underline decoration-yellow-500 text-sm underline decoration-wavy underline-offset-4">Games</a>
+        <a className="cursor-pointer font-semibold active:text-black hover:underline decoration-yellow-500 text-sm underline decoration-wavy underline-offset-4">Home</a>
+        <a className="cursor-pointer font-semibold active:text-black hover:underline decoration-yellow-500 text-sm decoration-wavy underline-offset-4">Games</a>
         <a className="cursor-pointer font-semibold active:text-black hover:underline decoration-yellow-500 text-sm decoration-wavy underline-offset-4">Contact</a>
         <a className="cursor-pointer font-semibold active:text-black hover:underline decoration-yellow-500 text-sm decoration-wavy underline-offset-4">About Us</a>
       </div>
 
       {/* social cards */}
       <div className="flex md:ml-auto gap-4">
-        <img src="/images/facebook.png" alt="facebook_logo"  width={30} height={30}/>
-        <img src="/images/twitter.png" alt="facebook_logo"  width={30} height={30}/>
-        <img src="/images/instagram.png" alt="facebook_logo" width={30} height={30} />
-        <img src="/images/youtube.png" alt="facebook_logo" width={30} height={30} />
+        <img src="/images/facebook.png" alt="facebook_logo"  width={20} height={20}/>
+        <img src="/images/twitter.png" alt="facebook_logo"  width={20} height={20}/>
+        <img src="/images/instagram.png" alt="facebook_logo" width={20} height={20} />
+        <img src="/images/youtube.png" alt="facebook_logo" width={20} height={20} />
       </div>
     </div>
   </header>
