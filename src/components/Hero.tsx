@@ -1,7 +1,13 @@
+import React, { HTMLProps } from "react";
+
+interface HeroProps extends HTMLProps<HTMLDivElement> {}
+
 /* eslint-disable @next/next/no-img-element */
-export default function Hero() {
+export default function Hero({
+  ...rest
+}: HeroProps) {
   return <>
-    <div className="w-full flex-1">
+    <div className="w-full flex-1 bg-white" {...rest}>
       <div 
         className="flex w-full h-full px-4 py-28 max-w-screen-xl mx-auto justify-center items-center"
       >

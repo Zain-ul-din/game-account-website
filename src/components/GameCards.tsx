@@ -36,7 +36,7 @@ export default function GameCards({
   const containerMaxHeight = useMemo(()=> (cardHeight * 3) + (16 * 3), [cardHeight])
   
   return <div 
-    className={`grid gap-4 relative`}
+    className={`grid gap-4 relative bg-white`}
     style={{
       gridTemplateColumns: `repeat(${gridCol}, minmax(0, 1fr))`,
       overflow: 'hidden',

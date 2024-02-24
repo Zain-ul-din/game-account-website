@@ -7,7 +7,7 @@ import GameCards from "./GameCards";
 export default function GameSection() {
   const containerRef = useRef<HTMLDivElement | null>(null)
 
-  return <div className="w-full py-16 px-4">
+  return <div className="w-full py-16 px-4 bg-white">
     
     <div className="max-w-screen-xl mx-auto flex flex-col gap-12" ref={containerRef}>
       <div className="flex flex-col gap-1">

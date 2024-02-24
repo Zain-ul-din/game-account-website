@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(`w-full h-full antialiased`, 
+      <body className={cn(`w-full h-full antialiased bg-white`, 
         oxygenRegular.className, 
         oxygenRegular.variable, 
         backTo1982.variable)}>  
