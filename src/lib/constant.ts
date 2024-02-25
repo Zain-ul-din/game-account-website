@@ -7,6 +7,8 @@
   })
 */
 
+import { GameMetaData } from "@/types/GameMetaData"
+
 export const accountGames = [
   {
     src: 'https://play.google.com/store/apps/details?id=com.gf.bike.race.free.racing.games',
@@ -84,3 +86,40 @@ export const accountGames = [
     title: 'Multi Shape Shift Car Game',
   },
 ]
+
+export const actionGames: Array<GameMetaData> = [
+  {
+    url: 'https://play-lh.googleusercontent.com/mvnNHGqfdnfqUo5X4xAxOHh9aS_G7fbt9P_7V83JQoOdaWVaLm8PsTZf20S176H8ZUI2=w1024-h720-rw',
+    alt: 'grand_vegas',
+    link: 'https://play.google.com/store/apps/details?id=com.hbg.horror.grand.gangster.theft.survival.crime.city',
+  },
+  {
+    url: 'https://play-lh.googleusercontent.com/jk3_AAZJfYU_D3GFVdpohUqPhmSecx1gv1-glgJ7m53vZKuorSlEf9vgb1qZsXCB5g=w1024-h720-rw',
+    alt: 'grand_vegas',
+    link: 'https://play.google.com/store/apps/details?id=com.hbg.horror.grand.gangster.theft.survival.crime.city',
+  },
+  {
+    url: 'https://play-lh.googleusercontent.com/Ef7GDNqkZov4MvwQecJQgr1cY2M3AQ1PXlswf4F-usC6lL_2GKPcn0_JmpSn_s5UxJ4=w1024-h720-rw',
+    alt: 'grand_vegas',
+    link: 'https://play.google.com/store/apps/details?id=com.rlg.future.robot.transform.car.racing',
+  },
+  {
+    url: 'https://play-lh.googleusercontent.com/akKkkdfSqZ06rA9YEcCOYRNy_G3oumhhMU0Ds_cxZLx2BhrCa4IU2kn2vcwi567lYA=w1024-h720-rw',
+    alt: 'grand_vegas',
+    link: 'https://play.google.com/store/apps/details?id=com.rlg.future.robot.transform.car.racing',
+  },
+]
+
+export const hyperCasualGames: Array<GameMetaData> = [
+  {
+    url: 'https://play-lh.googleusercontent.com/jq1hk9DF_q9iiBdahvO2tCjesrwMfTQTyTx4mnTZ9NYBzyoC9vpitcGaQECx91k-9Q=w1024-h720-rw',
+    alt: '',
+    link: ''
+  },
+  {
+    url: 'https://play-lh.googleusercontent.com/Ank3YJBIT_0rGmJqgkhwcVRdDmaf_-54Kj0kZf3ciScACVNbmefU3sfUFUCk1ajYdTs=w1024-h720-rw',
+    alt: '',
+    link: ''
+  }
+]
+
