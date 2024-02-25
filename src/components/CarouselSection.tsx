@@ -22,6 +22,22 @@ export default function CarouselSection() {
     return () => clearInterval(intervalId)
   }, [])
 
+  useEffect(() => {
+    const preLoadImages = async () => {
+      const imagesPromise = [
+        ...actionGames,
+        ...adventurerGames,
+        ...hyperCasualGames,
+        ...otherPortraitGames,
+      ].map((v) => {
+        return fetch(v.url)
+      })
+      await Promise.all(imagesPromise)
+    }
+
+    preLoadImages()
+  }, [])
+
   return (
     <div className="flex w-full bg-white py-3 px-3">
       <div className="max-w-screen-md mx-auto w-full">
