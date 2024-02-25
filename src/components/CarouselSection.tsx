@@ -22,22 +22,6 @@ export default function CarouselSection() {
     return () => clearInterval(intervalId)
   }, [])
 
-  useEffect(() => {
-    const preLoadImages = async () => {
-      const imagesPromise = [
-        ...actionGames,
-        ...adventurerGames,
-        ...hyperCasualGames,
-        ...otherPortraitGames,
-      ].map((v) => {
-        return fetch(v.url)
-      })
-      await Promise.all(imagesPromise)
-    }
-
-    preLoadImages()
-  }, [])
-
   return (
     <div className="flex w-full bg-white py-3 px-3">
       <div className="max-w-screen-md mx-auto w-full">
@@ -147,6 +131,18 @@ const ImageCard: React.FC<ImageCardProps> = ({
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
   }, [activeIdx, idx, images.length])
 
+  useEffect(() => {
+    const prefetchImages = async () => {
+      for (const image of images) {
+        const img = new Image()
+        img.src = image.url
+        await img.decode()
+      }
+    }
+
+    prefetchImages()
+  }, [images])
+
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -171,7 +167,8 @@ const ImageCard: React.FC<ImageCardProps> = ({
           initial={{ opacity: 0.1, x: '-100%' }}
           animate={{ opacity: 1, x: '0%' }}
           exit={{ opacity: 0, x: '100%' }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.4, ease: 'easeInOut' }}
+          loading="lazy"
         />
       </motion.div>
     </AnimatePresence>
