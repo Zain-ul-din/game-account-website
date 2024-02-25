@@ -6,14 +6,21 @@ const CARDS_SIZE = 5
 
 export default function CarouselSection() {
   const [threshold, setThreshold] = useState<number>(0.5)
-  const [ref, isInView] = useInView({
-    triggerOnce: true,
-    threshold: threshold,
-  })
+  const [ref, isInView] = useInView({ triggerOnce: true, threshold: threshold })
 
   const isSmScreen = useMediaQuery('(max-width: 600px)')
   useEffect(() => setThreshold(isSmScreen ? 0.4 : 0.5), [isSmScreen])
-  const [activeCard, setActiveCard] = useState(0)
+  const [activeCard, setActiveCard] = useState(-1)
+
+  useEffect(() => {
+    let intervalId: NodeJS.Timeout
+
+    intervalId = setInterval(() => {
+      setActiveCard((prevIndex) => (prevIndex + 1) % CARDS_SIZE)
+    }, 4000)
+
+    return () => clearInterval(intervalId)
+  }, [])
 
   return (
     <div className="flex w-full bg-white py-3 px-3">
@@ -34,28 +41,20 @@ export default function CarouselSection() {
               opacity: isInView ? 1 : 0,
               transition: 'all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s',
             }}
-            cardsSize={CARDS_SIZE}
             idx={0}
-            shallAnimate={(idx) => {
-              setActiveCard((activeCard + 1) % CARDS_SIZE)
-              return idx == activeCard
-            }}
+            activeIdx={activeCard}
           />
 
           <ImageCard
             className="col-span-6 sm:col-span-3"
-            images={actionGames}
+            images={adventurerGames}
             style={{
               transform: isInView ? 'none' : 'translateX(-200px)',
               opacity: isInView ? 1 : 0,
               transition: 'all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s',
             }}
-            cardsSize={CARDS_SIZE}
             idx={1}
-            shallAnimate={(idx) => {
-              setActiveCard((activeCard + 1) % CARDS_SIZE)
-              return idx == activeCard
-            }}
+            activeIdx={activeCard}
           />
 
           {/* vertical cards */}
@@ -68,44 +67,32 @@ export default function CarouselSection() {
               opacity: isInView ? 1 : 0,
               transition: 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s',
             }}
-            cardsSize={CARDS_SIZE}
             idx={2}
-            shallAnimate={(idx) => {
-              setActiveCard((activeCard + 1) % CARDS_SIZE)
-              return idx == activeCard
-            }}
+            activeIdx={activeCard}
           />
 
           <ImageCard
             className="col-span-3 sm:col-span-2 row-span-1"
-            images={hyperCasualGames}
+            images={hackathonGames}
             style={{
               transform: isInView ? 'none' : 'translateX(-200px)',
               opacity: isInView ? 1 : 0,
               transition: 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s',
             }}
-            cardsSize={CARDS_SIZE}
             idx={3}
-            shallAnimate={(idx) => {
-              setActiveCard((activeCard + 1) % CARDS_SIZE)
-              return idx == activeCard
-            }}
+            activeIdx={activeCard}
           />
 
           <ImageCard
             className="hidden md:flex col-span-2 row-span-1"
-            images={hyperCasualGames}
+            images={otherPortraitGames}
             style={{
               transform: isInView ? 'none' : 'translateX(-200px)',
               opacity: isInView ? 1 : 0,
               transition: 'all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s',
             }}
-            cardsSize={CARDS_SIZE}
             idx={4}
-            shallAnimate={(idx) => {
-              setActiveCard((activeCard + 1) % CARDS_SIZE)
-              return idx == activeCard
-            }}
+            activeIdx={activeCard}
           />
         </div>
       </div>
@@ -118,39 +105,31 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useMediaQuery } from 'usehooks-ts'
 import { GameMetaData } from '@/types/GameMetaData'
-import { actionGames, hyperCasualGames } from '@/lib/constant'
+import {
+  actionGames,
+  adventurerGames,
+  hackathonGames,
+  hyperCasualGames,
+  otherPortraitGames,
+} from '@/lib/constant'
 
 interface ImageCardProps extends HTMLProps<HTMLDivElement> {
   images: Array<GameMetaData>
-  cardsSize: number
-  shallAnimate: (idx: number) => boolean
+  activeIdx: number
   idx: number
 }
 
 const ImageCard: React.FC<ImageCardProps> = ({
   images,
-  cardsSize,
-  shallAnimate,
+  activeIdx,
   idx,
   ...rest
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
-
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout
-    let intervalId: NodeJS.Timeout
-
-    intervalId = setInterval(() => {
-      if (shallAnimate(idx)) {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
-      }
-    }, 3000)
-
-    return () => {
-      clearInterval(intervalId)
-      clearTimeout(timeoutId)
-    }
-  }, [images.length, shallAnimate, idx])
+    if (activeIdx !== idx) return
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
+  }, [activeIdx, idx, images.length])
 
   return (
     <AnimatePresence mode="wait">

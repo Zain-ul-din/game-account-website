@@ -98,6 +98,7 @@ export const actionGames: Array<GameMetaData> = [
     alt: 'grand_vegas',
     link: 'https://play.google.com/store/apps/details?id=com.hbg.horror.grand.gangster.theft.survival.crime.city',
   },
+
   {
     url: 'https://play-lh.googleusercontent.com/Ef7GDNqkZov4MvwQecJQgr1cY2M3AQ1PXlswf4F-usC6lL_2GKPcn0_JmpSn_s5UxJ4=w1024-h720-rw',
     alt: 'grand_vegas',
@@ -108,18 +109,137 @@ export const actionGames: Array<GameMetaData> = [
     alt: 'grand_vegas',
     link: 'https://play.google.com/store/apps/details?id=com.rlg.future.robot.transform.car.racing',
   },
+
+  {
+    url: 'https://play-lh.googleusercontent.com/yjSpK8pHqKiEG0KbixhjQIoczv-0zvebdNEudYeY5wcH3P3VEy-sCdj48o-glbBWQoY=w1024-h720-rw',
+    alt: 'game_logo',
+    link: 'https://play.google.com/store/apps/details?id=com.ga.stickman.rope.spider.hero.crime.games'
+  },
+  {
+    url: 'https://play-lh.googleusercontent.com/CqpXJyTZTEZea_yNrEkXfztDk4PnMquUYLsiQHZjZAf5-h-LlVQ7OI8gBUeDYa-SLOua=w1024-h720-rw',
+    alt: 'game_logo',
+    link: 'https://play.google.com/store/apps/details?id=com.ga.stickman.rope.spider.hero.crime.games'
+  }
+]
+
+export const adventurerGames: Array<GameMetaData> = [
+  {
+    url: 'https://play-lh.googleusercontent.com/MXNL9LG_Op1dViES3kjWaGrd5tjcDH42LlJ4mXGwWdxAxdK4FbTHC7r8ysUUtQqbbuc=w1024-h720-rw',
+    alt: 'Superhero_Car_Stunt',
+    link: 'https://play.google.com/store/apps/details?id=com.hgs.extremeracing.citydriving.driftcar'
+  },
+  {
+    url: 'https://play-lh.googleusercontent.com/YmzCmFPvYwYbeOl4ebue__JJCk7hhVVSpJ6qSbXESAAXTd8QN-j6tQmHjZP6B-DkXQ=w1024-h720-rw',
+    alt: 'Superhero_Car_Stunt',
+    link: 'https://play.google.com/store/apps/details?id=com.hgs.extremeracing.citydriving.driftcar'
+  },
+
+  {
+    url: 'https://play-lh.googleusercontent.com/kkKTig34to5J8q3QuD9EkeqFJXmIPnhaYek54EMbNl2cRrg_TkKpVNuu9WuKcy6pmZGa=w1024-h720-rw',
+    alt: 'Car Saler Game',
+    link: 'https://play.google.com/store/apps/details?id=com.gf.car.wash.service.station.gas.station.garage'
+  },
+  {
+    url: 'https://play-lh.googleusercontent.com/E1Ezw6L6I9K9NrKZuG5QRpkGcS8h4M2RyfMRQYwbA0HQuuLRZK7taFTZOYSxhPPa4g=w1024-h720-rw',
+    alt: 'Car Saler Game',
+    link: 'https://play.google.com/store/apps/details?id=com.gf.car.wash.service.station.gas.station.garage'
+  },
+
+
+  {
+    url: 'https://play-lh.googleusercontent.com/y59URkXYwlH_4CXC7acD-mC-8g-11ssOWBwj_n8RWH-iuGyQ9q4RMkx2EWWCULBmC8U=w1024-h720-rw',
+    alt: 'Mobile Car Wash',
+    link: 'https://play.google.com/store/apps/details?id=com.gf.mobile.car.wash.servicestation.workshop'
+  },
+  {
+    url: 'https://play-lh.googleusercontent.com/M1SepP77ZQ2rl32CnKPoC1HVndFYyG0m_jBXzE1sx3Ty1jP1D-FICi3AgQyBQ0tXt-M=w1024-h720-rw',
+    alt: 'Mobile Car Wash',
+    link: 'https://play.google.com/store/apps/details?id=com.gf.mobile.car.wash.servicestation.workshop'
+  },
 ]
 
 export const hyperCasualGames: Array<GameMetaData> = [
   {
-    url: 'https://play-lh.googleusercontent.com/jq1hk9DF_q9iiBdahvO2tCjesrwMfTQTyTx4mnTZ9NYBzyoC9vpitcGaQECx91k-9Q=w1024-h720-rw',
-    alt: '',
-    link: ''
+    url: 'https://play-lh.googleusercontent.com/fBsPlXsxa2o8pYUHEmTdy0YBGIMyZjzE91lNuc1xR2WF2Q0nTK-ubDGKjReiGUxHgA=w1024-h720-rw',
+    alt: 'Knife Runner 3D',
+    link: 'https://play.google.com/store/apps/details?id=com.hb.kniferunner.game'
   },
   {
-    url: 'https://play-lh.googleusercontent.com/Ank3YJBIT_0rGmJqgkhwcVRdDmaf_-54Kj0kZf3ciScACVNbmefU3sfUFUCk1ajYdTs=w1024-h720-rw',
-    alt: '',
-    link: ''
+    url: 'https://play-lh.googleusercontent.com/-BmELRilhu0CdAEc-mFhRzjN-Qz9Bjj5yCqI-sZXXuo52Bu3hoDiXRlfBGDdzMcTzQ=w1024-h720-rw',
+    alt: 'Knife Runner 3D',
+    link: 'https://play.google.com/store/apps/details?id=com.hb.kniferunner.game'
+  },
+
+
+  {
+    url: 'https://play-lh.googleusercontent.com/vAMqhwGaFCjllmKds1c2ZYT4bRBDJWYCuaGXw4PTFQ_x9cA0moTjqiqElhp2V-4vqIjf=w1024-h720-rw',
+    alt: 'Racing Ball Game',
+    link: 'https://play.google.com/store/apps/details?id=com.hb.going.rolling.balls.race.ball.games'
+  },
+  {
+    url: 'https://play-lh.googleusercontent.com/lWpEMtuJQ3yxIHMJq5mycGF35M_DQAwsxrsRNuLj0xmIPWU_kZ3UmzTjgJyZus2BC9I=w1024-h720-rw',
+    alt: 'Racing Ball Game',
+    link: 'https://play.google.com/store/apps/details?id=com.hb.going.rolling.balls.race.ball.games'
+  }
+
+  ,
+  {
+    url: 'https://play-lh.googleusercontent.com/w5OHXQfUV1a_bD3xtINYxU5h0xUEp2mff7X7DTYD1TemST7q_dK67ImWgTEKC-HmqdU=w1024-h720-rw',
+    alt: 'Mini Car Games',
+    link: 'https://play.google.com/store/apps/details?id=com.brg.freegames.trafficcar.cargames.trafficcity'
+  },
+  {
+    url: 'https://play-lh.googleusercontent.com/jipGex2PFNgLEc1U1ehduJ2LYLrF4_pL7XDMZDamALVZ-by_2x7EpgVO2Ys-RiOlYHE=w1024-h720-rw',
+    alt: 'Mini Car Games',
+    link: 'https://play.google.com/store/apps/details?id=com.brg.freegames.trafficcar.cargames.trafficcity'
+  },
+
+]
+
+export const hackathonGames: Array<GameMetaData> =  [
+  {
+    url: 'https://play-lh.googleusercontent.com/xd6Qndq5t_VaoHzhs-mo1I8fXwvsW-vX5NM0G6WLzoHDYvTvHrD9PrQDR0_B3gvonqw=w1024-h720-rw',
+    alt: 'Slow Mo Hero',
+    link: 'https://play.google.com/store/apps/details?id=com.hb.Slow.Mo.Hero.Running.Game'
+  },
+  {
+    url: 'https://play-lh.googleusercontent.com/1CWfHuVHIkpWkyBVGsHzvUrPhvrlpMJL7-agpSaVCUqajMY6J08KleEOON_oP_sk_Q=w1024-h720-rw',
+    alt: 'Slow Mo Hero',
+    link: 'https://play.google.com/store/apps/details?id=com.hb.Slow.Mo.Hero.Running.Game'
+  },
+  
+  {
+    url: 'https://play-lh.googleusercontent.com/uNVM1SjNw7hYpVLLwR1MpGoSUTQ7MOd5xdQBAnrp7T0ynjOLOFQ27teIoggnP3uP2i4=w1024-h720-rw',
+    alt: 'Multi Shape Shift',
+    link: 'https://play.google.com/store/apps/details?id=com.hb.shapeshifting.transform.race.car.games'
+  },
+  {
+    url: 'https://play-lh.googleusercontent.com/npLZyQF02RY9Gub7FL71A7gLCw9kj1ytfKhtMDEfUlHkMrEq9cqJ2YQkJHE_6NnYlLc=w1024-h720-rw',
+    alt: 'Multi Shape Shift',
+    link: 'https://play.google.com/store/apps/details?id=com.hb.shapeshifting.transform.race.car.games'
   }
 ]
 
+export const otherPortraitGames: Array<GameMetaData> = [
+  {
+    url: 'https://play-lh.googleusercontent.com/MXMth2yQpCnXct3h6Cf8lCwGYb4RVBoq_f67luCL1z54HrQpEvsOvKnp1pZE39uhJJg=w1024-h720-rw',
+    alt: 'Multi Shape Shift',
+    link: 'https://play.google.com/store/apps/details?id=com.hb.shapeshifting.transform.race.car.games'
+  },
+  {
+    url: 'https://play-lh.googleusercontent.com/w5OHXQfUV1a_bD3xtINYxU5h0xUEp2mff7X7DTYD1TemST7q_dK67ImWgTEKC-HmqdU=w1024-h720-rw',
+    alt: 'Mini Car Games',
+    link: 'https://play.google.com/store/apps/details?id=com.brg.freegames.trafficcar.cargames.trafficcity'
+  },
+  {
+    url: 'https://play-lh.googleusercontent.com/Joh6rGm6Qe_kDDq1rDDsiR0AnOXUhJd4bq1DTQp8Hw4zuErQMpSI5pQq_a_QrWorJnQ=w1024-h720-rw',
+    alt: 'Mini Car Games',
+    link: 'https://play.google.com/store/apps/details?id=com.brg.freegames.trafficcar.cargames.trafficcity'
+  },
+  {
+    url: 'https://play-lh.googleusercontent.com/PBTpslOXveHVK5RbjeBWItRKP0v8KddfHryrbD2Lpl5x_fYuGBAJ343LKi6biZW7vNNc=w1024-h720-rw',
+    alt: 'Slow Mo Hero',
+    link: 'https://play.google.com/store/apps/details?id=com.hb.Slow.Mo.Hero.Running.Game'
+  },
+
+]
