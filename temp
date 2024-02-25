@@ -1,0 +1,36 @@
+.gallery {
+  display: grid;
+  grid-gap: 10px;
+
+  /* fill the page's width with columns, each having from about 200 to 400 px */
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  
+  /* first row's height: 250px, second row's: 150px, third row's: 250px, and so on */
+  grid-auto-rows: 130px 1;
+  
+  /* from MDN: "fill in holes earlier in the grid, if smaller items come up later" */
+  grid-auto-flow: dense;
+}
+
+.item {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* for larger screens... */
+  @media (min-width: 480px) {
+    
+    /* first item will have size 2x2 */
+    &:first-child {
+      grid-area: 1 / 1 / span 2 / span 2;
+    }
+
+    /* and every third item will have size 2x1 */
+    &:nth-child(3n) {
+      grid-column: span 2;
+    }
+ 
+  }
+}

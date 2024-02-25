@@ -14,7 +14,7 @@ export default function GameSection() {
         <h1 className="text-3xl font-bold">
           Games
         </h1>
-        <p className="text-neutral-700">Our dream is to create games that as many people as possible play for years and that are remembered forever.</p>
+        <p className="text-neutral-700">{`Our vision is to develop games that attract a wide audience, encouraging long-term engagement and leaving a lasting impact in players' memories.`}</p>
       </div>
 
       <GameCards 
