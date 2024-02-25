@@ -62,7 +62,7 @@ export default function GameCards({
       </div>
     </>
     }
-
+  
     {/* cards */}
     {accountGames.map((game, i)=> {
       return <a 

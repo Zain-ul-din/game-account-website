@@ -4,7 +4,17 @@ import { HTMLProps } from "react"
 
 /* eslint-disable @next/next/no-img-element */
 export default function CarouselSection() {
-  return <div className="flex w-full bg-white py-3 px-3">
+  
+  const [threshold, setThreshold] = useState<number>(0.5)
+  const [ref, isInView] = useInView({
+    triggerOnce: true,
+    threshold: threshold,
+  });
+
+  const isSmScreen = useMediaQuery("(max-width: 600px)")
+  useEffect(()=> setThreshold(isSmScreen ? 0.3 : 0.5),[isSmScreen])
+  
+  return <div className="flex w-full bg-white py-3 px-3" ref={ref}>
     <div className="max-w-screen-md mx-auto w-full">
       <div className="grid grid-cols-4 gap-2"
         style={{
@@ -16,30 +26,55 @@ export default function CarouselSection() {
           className="col-span-6 sm:col-span-3"
           url="https://play-lh.googleusercontent.com/kkKTig34to5J8q3QuD9EkeqFJXmIPnhaYek54EMbNl2cRrg_TkKpVNuu9WuKcy6pmZGa=w1024-h720-rw"
           alt="grand_vegas"
+          style={{
+            transform: isInView ? "none" : "translateX(-200px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          }}
         />
 
         <ImageCard 
           className="col-span-6 sm:col-span-3"
           url="https://play-lh.googleusercontent.com/kkKTig34to5J8q3QuD9EkeqFJXmIPnhaYek54EMbNl2cRrg_TkKpVNuu9WuKcy6pmZGa=w1024-h720-rw"
           alt="grand_vegas"
+          style={{
+            transform: isInView ? "none" : "translateX(-200px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.6s"
+          }}
         />
         
         <ImageCard 
           className="col-span-3 sm:col-span-2 row-span-1"
           url="https://play-lh.googleusercontent.com/jq1hk9DF_q9iiBdahvO2tCjesrwMfTQTyTx4mnTZ9NYBzyoC9vpitcGaQECx91k-9Q=w1024-h720-rw"
           alt="slow_mo_run"
+          style={{
+            transform: isInView ? "none" : "translateX(-200px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s"
+          }}
         />
         
         <ImageCard 
           className="col-span-3 sm:col-span-2 row-span-1"
           url="https://play-lh.googleusercontent.com/jq1hk9DF_q9iiBdahvO2tCjesrwMfTQTyTx4mnTZ9NYBzyoC9vpitcGaQECx91k-9Q=w1024-h720-rw"
           alt="slow_mo_run"
+          style={{
+            transform: isInView ? "none" : "translateX(-200px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.8s"
+          }}
         />
 
         <ImageCard 
           className="hidden md:flex col-span-2 row-span-1"
           url="https://play-lh.googleusercontent.com/jq1hk9DF_q9iiBdahvO2tCjesrwMfTQTyTx4mnTZ9NYBzyoC9vpitcGaQECx91k-9Q=w1024-h720-rw"
           alt="slow_mo_run"
+          style={{
+            transform: isInView ? "none" : "translateX(-200px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.9s"
+          }}
         />
         
       </div>
@@ -50,30 +85,21 @@ export default function CarouselSection() {
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from "react-intersection-observer";
+import { useMediaQuery } from "usehooks-ts";
 
 interface ImageCardProps extends HTMLProps<HTMLDivElement> {
   url: string;
   alt: string;
 }
 
+
 const ImageCard: React.FC<ImageCardProps> = ({ url, alt, ...rest }) => {
-  const [ref, isInView] = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  });
+  
 
   return (
     <AnimatePresence>
       <div
-        ref={ref}
         {...rest}
-        style={{
-          transform: isInView ? "none" : "translateX(-200px)",
-          opacity: isInView ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-          height: 'auto',
-          ...rest.style,
-        }}
       >
         <motion.img
           src={url}
