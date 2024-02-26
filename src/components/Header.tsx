@@ -1,5 +1,8 @@
 'use client'
 
+import { routes } from '@/lib/routes'
+import { cn } from '@/lib/utils'
+import { usePathname } from 'next/navigation'
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useRef, useState } from 'react'
 import { useWindowSize } from 'usehooks-ts'
@@ -13,6 +16,8 @@ export default function Header() {
     if (!bannerRef.current) return
     setMarginTop(bannerRef.current.clientHeight)
   }, [width, height, bannerRef])
+
+  const path = usePathname()
 
   return (
     <>
@@ -52,18 +57,20 @@ export default function Header() {
 
           {/* Links */}
           <div className="flex md:ml-8 gap-4">
-            <a className="cursor-pointer font-semibold active:text-black hover:underline decoration-yellow-500 text-sm underline decoration-wavy underline-offset-4">
-              Home
-            </a>
-            <a className="cursor-pointer font-semibold active:text-black hover:underline decoration-yellow-500 text-sm decoration-wavy underline-offset-4">
-              Games
-            </a>
-            <a className="cursor-pointer font-semibold active:text-black hover:underline decoration-yellow-500 text-sm decoration-wavy underline-offset-4">
-              Contact
-            </a>
-            <a className="cursor-pointer font-semibold active:text-black hover:underline decoration-yellow-500 text-sm decoration-wavy underline-offset-4">
-              About Us
-            </a>
+            {Object.entries(routes).map(([key, val], i) => {
+              return (
+                <a
+                  href={val}
+                  key={i}
+                  className={cn(
+                    'cursor-pointer font-semibold active:text-black hover:underline decoration-yellow-500 text-sm decoration-wavy underline-offset-4',
+                    val == path ? 'underline' : '',
+                  )}
+                >
+                  {key}
+                </a>
+              )
+            })}
           </div>
 
           {/* social cards */}

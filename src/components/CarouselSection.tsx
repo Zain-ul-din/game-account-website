@@ -168,21 +168,27 @@ const ImageCard: React.FC<ImageCardProps> = ({
         }}
         className={rest.className}
       >
-        <motion.img
-          key={currentIndex}
-          src={images[currentIndex].url}
-          alt={images[currentIndex].alt}
-          style={{
-            width: '100%',
-            objectFit: 'contain',
-          }}
-          className="rounded-md shadow-md"
-          initial={{ opacity: 0.1, x: '-100%' }}
-          animate={{ opacity: 1, x: '0%' }}
-          exit={{ opacity: 0, x: '100%' }}
-          transition={{ duration: 0.4, ease: 'easeInOut' }}
-          loading="lazy"
-        />
+        <a
+          href={images[currentIndex].link}
+          target="_blank"
+          className="hover:opacity-90"
+        >
+          <motion.img
+            key={currentIndex}
+            src={images[currentIndex].url}
+            alt={images[currentIndex].alt}
+            style={{
+              width: '100%',
+              objectFit: 'contain',
+            }}
+            className="rounded-md shadow-md"
+            initial={{ opacity: 0.1, x: '-100%' }}
+            animate={{ opacity: 1, x: '0%' }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ duration: 0.4, ease: 'easeInOut' }}
+            loading="lazy"
+          />
+        </a>
       </motion.div>
     </AnimatePresence>
   )

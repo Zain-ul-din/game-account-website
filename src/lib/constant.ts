@@ -243,3 +243,8 @@ export const otherPortraitGames: Array<GameMetaData> = [
   },
 
 ]
+
+export const accountLinks = {
+  'google': 'https://play.google.com/store/apps/dev?id=4693730298341895537',
+  'apple': 'https://play.google.com/store/apps/dev?id=4693730298341895537'
+}

@@ -4,7 +4,11 @@ import { useRef } from 'react'
 
 import GameCards from './GameCards'
 
-export default function GameSection() {
+interface GameSectionProps {
+  showAll?: boolean
+}
+
+export default function GameSection({ showAll }: GameSectionProps) {
   const containerRef = useRef<HTMLDivElement | null>(null)
 
   return (
@@ -18,7 +22,7 @@ export default function GameSection() {
           <p className="text-neutral-700">{`Our vision is to develop games that attract a wide audience, encouraging long-term engagement and leaving a lasting impact in players' memories.`}</p>
         </div>
 
-        <GameCards containerRef={containerRef} />
+        <GameCards containerRef={containerRef} showAll={showAll} />
       </div>
     </div>
   )

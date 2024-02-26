@@ -15,13 +15,14 @@ import { accountGames } from '@/lib/constant'
 
 interface GameCardsProps {
   containerRef: MutableRefObject<HTMLDivElement | null>
+  showAll?: boolean
 }
 
-export default function GameCards({ containerRef }: GameCardsProps) {
+export default function GameCards({ containerRef, showAll }: GameCardsProps) {
   const { height, width } = useWindowSize()
   const [gridCol, setGridCol] = useState<number>(5)
   const [cardHeight, setCardHeight] = useState<number>(Infinity)
-  const [showMore, setShowMore] = useState<boolean>(false)
+  const [showMore, setShowMore] = useState<boolean>(showAll || false)
 
   const handleResponseLayout = useCallback(() => {
     if (containerRef.current == null) return
@@ -61,7 +62,7 @@ export default function GameCards({ containerRef }: GameCardsProps) {
             style={{
               height: `${cardHeight + 1}px`,
               background:
-                'linear-gradient(to bottom, rgba(255,255,255,0.2), white 90%)',
+                'linear-gradient(to bottom, rgba(255,255,255,0.4), white 95%)',
               pointerEvents: 'none',
             }}
           ></div>
@@ -97,7 +98,6 @@ export default function GameCards({ containerRef }: GameCardsProps) {
               alt={`${game.title} image`}
               width={'100%'}
               onError={(e) => {
-                console.log('fail to load')
                 ;(e.target as HTMLImageElement).src = 'images/games/slowmo.webp'
               }}
               onLoad={() => handleResponseLayout()}
@@ -106,7 +106,7 @@ export default function GameCards({ containerRef }: GameCardsProps) {
               <h1 className="truncate font-semibold md:text-sm text-xs">
                 {game.title}
               </h1>
-              <p className="truncate text-[10px] md:text-xs text-neutral-700">
+              <p className="line-clamp-3 text-[10px] md:text-xs text-neutral-700">
                 Slow Mo Hero is an interesting drag running game where you can
                 run and fight with people in various action styles. This slow mo
                 game allows you to move your character in slow motion

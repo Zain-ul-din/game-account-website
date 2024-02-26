@@ -3,6 +3,8 @@ import { cn } from '@/lib/utils'
 import LocalFont from 'next/font/local'
 import { Oxygen } from 'next/font/google'
 import './globals.css'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 const backTo1982 = LocalFont({
   src: [
@@ -40,7 +42,9 @@ export default function RootLayout({
           backTo1982.variable,
         )}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )

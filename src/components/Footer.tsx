@@ -1,9 +1,13 @@
-const FooterLinks = [
-  'Terms of services',
-  'Privacy Policy',
-  'Our Games',
-  'Other legal Docs',
-]
+import { accountLinks } from '@/lib/constant'
+import { routes } from '@/lib/routes'
+import { Key, Mail, MapPin } from 'lucide-react'
+
+const FooterLinks = {
+  'Terms of services': '/',
+  'Privacy Policy': '/',
+  'Our Games': routes.Games,
+  'Other legal Docs': '/',
+}
 
 /* eslint-disable @next/next/no-img-element */
 export default function Footer() {
@@ -44,42 +48,55 @@ export default function Footer() {
           <div className="flex flex-col gap-3 w-full md:w-auto md:ml-auto border-b border-gray-200 pb-4 md:border-0">
             <h3 className="text-md font-medium">Download our games on</h3>
             <div className="flex gap-2">
-              <img
-                src="/images/play-store.png"
-                width={120}
-                height={40}
-                alt="play-store"
-              />
-              <img
-                src="/images/app-store.png"
-                width={120}
-                height={40}
-                alt="app-store"
-              />
+              <a href={accountLinks.google} target="_blank">
+                <img
+                  src="/images/play-store.png"
+                  width={120}
+                  height={40}
+                  style={{
+                    minHeight: 40,
+                  }}
+                  alt="play-store"
+                  className="hover:opacity-85"
+                />
+              </a>
+              <a href={accountLinks.apple} target="_blank">
+                <img
+                  src="/images/app-store.png"
+                  width={120}
+                  height={40}
+                  alt="app-store"
+                  className="hover:opacity-85"
+                />
+              </a>
             </div>
           </div>
         </div>
 
         <div className="w-full flex gap-4 md:gap-5 flex-wrap justify-center md:justify-start py-6 md:border-t border-gray-200">
-          {FooterLinks.map((link, i) => {
+          {Object.entries(FooterLinks).map(([val, link], i) => {
             return (
               <a
                 key={i}
+                href={link}
                 className="text-gray-800 active:underline hover:underline cursor-pointer"
               >
-                {link}
+                {val}
               </a>
             )
           })}
         </div>
 
         <div className="w-full flex py-4 items-end gap-6 flex-wrap">
-          <div className="flex flex-col ">
+          <div className="flex flex-col gap-2">
             <p className="font-bold">HitBox Games</p>
             <p className="text-xs text-neutral-600">
-              44 D1 MM Alam Rd, Block D1 Gulberg III
+              <Mail className="mr inline-block" /> feedbackplaystrong@gmail.com
             </p>
-            <p className="text-xs text-neutral-600">Lahore, Punjab Pakistan</p>
+            <p className="text-xs text-neutral-600">
+              <MapPin className="mr inline-block" /> 44 D1 MM Alam Rd, Lahore,
+              Punjab Pakistan
+            </p>
           </div>
           <div className="md:ml-auto font-mono text-xs text-neutral-600">
             &copy; HitBox 2024 All rights reserved.
