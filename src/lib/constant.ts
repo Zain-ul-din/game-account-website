@@ -14,76 +14,96 @@ export const accountGames = [
     src: 'https://play.google.com/store/apps/details?id=com.gf.bike.race.free.racing.games',
     img: 'https://play-lh.googleusercontent.com/QDnWPQLiJvZDbN-G4FvV4Hz_KXcvI9Sl0vt0gf122y41iGZMjw83HKollBZYYc-lpihi=s256-rw',
     title: 'Indian Bike Gangster Simulator',
+    description: `Game Indian bike and car game lovers and bike master are welcome to play Indian driving in this bike simulator. This bike wali game will provide you the chance to play with most realistic Indian bikes. You can perform ultimate Indian driving with an amazing collection provided in the bike simulator of this Indian bike game. Be a best bike driver of Indian bike simulator who can show driving skills in realistic Indian bikes and car games. Highly optimized Indian driving controls and realistic physics will make a bike master addictive to play stunt driving unlike other bike games. Let’s full the craze of Indian bike driving by playing Indian bike and car game.`
   },
   {
     src: 'https://play.google.com/store/apps/details?id=com.hbg.horror.grand.gangster.theft.survival.crime.city',
     img: 'https://play-lh.googleusercontent.com/d6uAkIIX2SLRvkPygi-1XivOurqJZA-yyDK5TvUqg_vT59kXOzE4zHNXm-vC9gC6rKhL=s256-rw',
     title: 'Grand Vegas Simulator',
+    description: `Greeting to embellish a bit part of grand vegas simulator crime in the gang games offline. this gangster crime journey starts in gangster nation to go for the Miami simulator crime game in the grand vegas police games. if you like to go for the gangster games in the world of gangster city towns to fight for peace against criminal cops. the grand war happens between player and the city of the mafia action game. this gangster world of Vegas is based on a gang story to experience different modes in the gangster city of mafia crime to enhance your action fight against city crime. the story is about criminal cops and the city of mafia where shooter gang do city bank robbery which cause of violence against the peace of city people in the gang wars of vegas. gang action is always prepared for`
   },
   {
     src: 'https://play.google.com/store/apps/details?id=com.rlg.future.robot.transform.car.racing',
     img: 'https://play-lh.googleusercontent.com/i3gpK5fDk_oGtirLymT2owjamTm9I-12OdvdqBxHBq0hv7X2oXr5DR7HSJ_q9WYUYw=s256-rw',
     title: 'Spider Rope Games - Crime Hero',
+    description: `Welcome to the spider rope game, where you take on the gangster city mafia crime hero in this open-world action game. Immerse yourself in the exciting superhero rope games to restore justice and bring hope to the grand gangster city in this spider game.
+    Take control of the flying spider game and tackle the power of incredible spider rope abilities. Fly like a spider through the tallest buildings and navigate the gangster city hero battle with unmatchable flying superhero ability. The intuitive controls of spider rope games allow you to perform incredible stunts as a city action hero` 
   },
   {
     src: 'https://play.google.com/store/apps/details?id=com.gf.car.wash.service.station.gas.station.garage',
     img: 'https://play-lh.googleusercontent.com/rEOC2ENY8LgPq58S4N2Ig66OPcblpWGMumuZY9stcwx3UEXn2oJdojG5w_JzzYQvxA=s256-rw',
     title: 'Car Saler Game: Car Dealership',
+    description: `Welcome to the car saler game that puts you in the driver’s seat of your very own car dealership. Build your own car dealership, purchase, repair, and sell advanced cars. Choose from a diverse selection of vehicles like classic cars, luxury cars & sports cars. Make deals in neighborhood, car auctions, car markets & dealerships anywhere in the city.
+    Start with the used car dealer and gradually expand your car showroom in the car Saler simulator game. Customize your car showroom to attract a broad range of customers & enjoy ultimate car trading, car buying, and selling adventures of used cars.`
   },
   {
     src: 'https://play.google.com/store/apps/details?id=com.hb.going.rolling.balls.race.ball.games',
     img: 'https://play-lh.googleusercontent.com/dIVDLOS030en08aJ-z4dxVsnxypIuUPM6k_z89HTtXKFqwtZ-nMKUJY9NmtEnEkYBTw=s256-rw',
     title: 'Racing Ball Game: Rolling Game',
+    description: `Do you love a wild ball game with tons of challenges and unexpected obstacles? Navigate through the unexpected barriers in the addictive ball race that keep you entertained. Roll, spin, jump and master the racing ball controls to get maximum points. Try not to fall and lose your life because ultimate challenges lie ahead in action ball game. Get into the exciting ball races in cool environments to have a lot of fun in this rolling ball game 3d.
+    Tap to roll the epic ball quickly and steadily to balance it carefully in challenging levels. Break your new record in ball run game and overcome the challenges to become ball race master. Collect the different bonuses on the racing ramp to be stronger and finish the`
   },
   {
     src: 'https://play.google.com/store/apps/details?id=com.ga.stickman.rope.spider.hero.crime.games',
     img: 'https://play-lh.googleusercontent.com/YcKqOFH5Td0LFgG8YReuCeZyiX83mJh_Ub9RHuS_jKTX4LlNDeSrtO-9HPMpgNAuCTI=s256-rw',
     title: 'Stickman Spider Rope Games',
+    description: `An action-packed stickman spider rope hero game is here. Enjoy!`
   },
   {
     src: 'https://play.google.com/store/apps/details?id=com.hb.Slow.Mo.Hero.Running.Game',
     img: 'https://play-lh.googleusercontent.com/S6ZJxIuhxSlzLebw0SNn81PruLG8iX3rr80Fdylnll7KK9Mi3XQcIlagLhqHlXVAj0E=s256-rw',
     title: 'Slow Mo Hero - Running Game',
+    description: `Slow Mo Hero is an interesting drag running game where you can run and fight with people in various action styles. This slow mo game allows you to move your character in slow motion. Drag, kick, punch, jump, avoid bullets and navigate through obstacles in a variety of custom ways. Make a fighting pose by dragging limbs to attack enemies and enjoy slow mo game offline.`
   },
   {
     src: 'https://play.google.com/store/apps/details?id=com.brg.freegames.trafficcar.cargames.trafficcity',
     img: 'https://play-lh.googleusercontent.com/OTLPtquEolRjx03JNR3tidmleT-xcV-wFad9-rCuvTtJUQfNeWE4KhlhPjRH9fMKhyI=s256-rw',
     title: 'Mini Car Games – Traffic Games',
+    description: `Car games lovers are welcome to play mini car race in traffic games. If you are an expert traffic driver then take the ultimate car run challenge in crazy traffic game. In this gadi game, you are going to experience real traffic car racing game on heavy traffic road. Do you want the next level of entertainment with traffic games then be ready to drive amazing cars in these mini car racing games. The traffic road in these mini car games will challenge your traffic driving game skills. So, drive carefully and enjoy mini car race to become a traffic driver of kar games. Latest collections of vehicles for car run are available in this gadi wala game. Are you a crazy traffic driver? then, you will experience the real feel of chasing and drifting through the streets of a real city rush. Show your driving skills in the city`
   },
   {
     src: 'https://play.google.com/store/apps/details?id=com.hb.grand.city.thug.gangster.vegas.cirme.simulator.game',
     img: 'https://play-lh.googleusercontent.com/yGTyq-ZR6EupBIDjiiFzgcXLyB5wyh54BrsQSzMGo0sS-u1fMK88LKpaAplZRJWzfco=s256-rw',
     title: 'Gangster City Thug Crime Game',
+    description: `Welcome to the gangster city thug game with ultimate thrill and exciting open-world gameplay. Try to conquer the city with grand gangster mafia war and rule over the gangster sin city. Drive bikes and cars in a huge city with full of mafia crime gangster in this gangster city crime game. Fight with other criminal gangsters in epic gang war by using ultimate modern weapons and RPG elements. Experience the thrill of gangster bike driving in crime city game offline.`
   },
   {
     src: 'https://play.google.com/store/apps/details?id=com.hgs.extremeracing.citydriving.driftcar',
     img: 'https://play-lh.googleusercontent.com/zuGL_tmoYyIymiGF0is0uNF831uFVKi7Z42XJnkKcUPuUB82n3TkcIQnT7VE7M6yHMzx=s256-rw',
     title: 'Superhero Car Stunt- Car Games',
+    description: `Superhero car stunt games lovers are welcome to enjoy crazy car driving in spider car games. Get ready for do crazy car stunts in spider superhero car games where you will get a chance to drive your favorite car in this gadi wala game. You will find an amazing collection of crazy cars unseen in other mega ramp car games or spider superhero car racing games. To fulfill your crazy car driving madness, we have designed impossible tracks for ultimate car stunts to do in stunt driving games. If you love superhero car stunt games or mega ramp car racing games then, be ready for crazy car driving in this spider car stunt game. Add another crazy car stunts gameplay in the list of your favorite mega ramp car stunt games`
   },
   {
     src: 'https://play.google.com/store/apps/details?id=com.hb.kniferunner.game',
     img: 'https://play-lh.googleusercontent.com/k-Sug3yrX9QpS6iJurosOa6B2EUu3vkVm657BXqMNPYlUhbOZrtekyGado1l2nnORA=s256-rw',
     title: 'Knife Runner 3D - Knife Games',
+    description: `Welcome to the knife game 3d, the ultimate knife run and slicing experience that redefined the genre. Dive into the epic world of action games where every slicing with skills & accuracy. The power and precision of each slice turning you into the knife master.
+    Experience the thrill of knife cutting game and action game like never before. Navigate through the challenging levels with the skills of knife master. Collect the knives and cut or slice fruits, vegetables, pumpkins, wooden crates, bottles, bubble wraps, cakes, jelly, soap, even everything in your way. Challenge yourself with moving targets and dynamic obstacles in this knife game.`
   },
   {
     src: 'https://play.google.com/store/apps/details?id=com.gt.wildhunter.bullattack.hungrybull.attackrampage',
     img: 'https://play-lh.googleusercontent.com/SD9ryCkrMfRI_wnLq0OC9w8Gvf3AF9gM4ryC1IvBfHYEIN5T7R_1ebl8Q6O0wAsAA9k=s256-rw',
     title: 'Bull Games - Wild Animal Games',
+    description: `Welcome to the wild animal games where you will enjoy exciting modes of bull fight game in this angry bull attack simulator. This wild animal attack game contains challenging missions to play in different arenas of bull fighting games i.e., seesaw, sand, street arena. Each mode of wild animal simulator games has sub mode with different gameplay which is unseen in other wild animals or bull games. Angry bull fighting game will give a tough time to survive in animal simulator unlike other animal hunting games. Stop the angry bull from the city attack and survive like a champion in animal attack games. If you want action packed features in wild animal games then get the experience of crazy bull fight game by having this animal attack simulator.` 
   },
   {
     src: 'https://play.google.com/store/apps/details?id=com.gf.mobile.car.wash.servicestation.workshop',
     img: 'https://play-lh.googleusercontent.com/CTrcDXexi-doqEEW_Ib9bBac0WDXtfNkTgqSxHNLTc83E-YhTsD4Q4q9y7mBogGmkXI=s256-rw',
     title: 'Mobile Car Wash: Car Games 3d',
+    description: `Car wash games lovers are welcome to become a car cleaning master in this washing car game. Unlike other car games 3d, this car wash simulator will provide you the chance perform multiple tasks i.e. mobile car wash, car paint and polish with power washing service. Don’t let your customers go to auto workshop garage in your car wash game. Provide modern car wash service at their destination for ease of playing fun car washing games. Many car wash games and offline car games are available in google play store where you will have to go to automobile workshop service station to car cleanup. Mobile carwash games will provide a different process of to wash cars that you are going to enjoy in these car cleaning games. All you need is to wash the muddy cars in car wash`
   },
   {
     src: 'https://play.google.com/store/apps/details?id=com.hb.dozer.demolish.adventure',
     img: 'https://play-lh.googleusercontent.com/4qxZt5mf5BTJ6LYYPPzv762VJKN5hDu9uCglmGVEQXZEc7YFcrcCzEpik_BEohggFcwA=s256-rw',
     title: 'Demolish Adventure: Dozer Game',
+    description: `Welcome to your favorite city demolish dozer game where you get to destroy giant city with your bulldozer. Brace yourself in thrilling adventures to master the destruction simulator game.
+    Get ready to demolition in a satisfying way through diverse challenges in this destruction game. Take control of immersive bulldozer with a massive wrecking ball and do a city smash in this bulldozer game. Plan your demolition city strategically to smash & rebuild in city demolish dozer game. Conquer the giant city with powerful wheel dozers, choose the right machine to tear down the giant city an`
   },
   {
     src: 'https://play.google.com/store/apps/details?id=com.hb.shapeshifting.transform.race.car.games',
     img: 'https://play-lh.googleusercontent.com/9Y0qunVZqq_1Tdwxl76OX83gFkdJGiQyAw6RYNEB2-b9LiW-S3MG7hTVo5D4d5jh-yY=s256-rw',
     title: 'Multi Shape Shift Car Game',
+    description: `Be ready to join the ultimate transform race in shape shifting car game. This shapeshift game will allow you to shift and shape into interesting vehicles on various terrain i.e., road, water and air. Adapt to your surroundings and stay one step ahead of the competition by doing instant shape transform. Transform into a variety of amazing cars 🚕, helicopters 🚁, bicycle 🚲, monster trucks each with its unique abilities in shape shifting game. Each level offers a different shape shift transform race challenge where you can showcase your shape shifting and transform skills. Enjoy transform race against AI opponents and beat them all to become an expert shape changer!`
   },
 ]
 

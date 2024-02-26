@@ -107,9 +107,7 @@ export default function GameCards({ containerRef, showAll }: GameCardsProps) {
                 {game.title}
               </h1>
               <p className="line-clamp-3 text-[10px] md:text-xs text-neutral-700">
-                Slow Mo Hero is an interesting drag running game where you can
-                run and fight with people in various action styles. This slow mo
-                game allows you to move your character in slow motion
+                {game.description}
               </p>
             </div>
           </a>

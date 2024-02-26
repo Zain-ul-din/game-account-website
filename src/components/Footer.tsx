@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const FooterLinks = {
   'Terms of services': '/',
-  'Privacy Policy': '/',
+  'Privacy Policy': '/company/privacy',
   'Our Games': routes.Games,
   'Other legal Docs': '/',
 }
@@ -91,13 +91,20 @@ export default function Footer() {
         <div className="w-full flex py-4 items-end gap-6 flex-wrap">
           <div className="flex flex-col gap-2">
             <p className="font-bold">HitBox Games</p>
-            <p className="text-xs text-neutral-600">
-              <Mail className="mr inline-block" /> feedbackplaystrong@gmail.com
-            </p>
-            <p className="text-xs text-neutral-600">
-              <MapPin className="mr inline-block" /> 44 D1 MM Alam Rd, Lahore,
-              Punjab Pakistan
-            </p>
+            <a
+              className="text-xs text-neutral-600 hover:underline"
+              href="mailto:feedbackhitbox08@gmail.com"
+            >
+              <Mail className="mr inline-block" /> feedbackhitbox08@gmail.com
+            </a>
+            <a
+              className="text-xs text-neutral-600 hover:underline"
+              target="_blank"
+              href="https://www.google.com/maps/place/Al+Satwa+-+Dubai+-+United+Arab+Emirates/@25.2201158,55.2740015,15z/data=!3m1!4b1!4m6!3m5!1s0x3e5f42f52c7f9adb:0xfd52c7771df58061!8m2!3d25.21937!4d55.272887!16s%2Fm%2F027ll3y?entry=ttu"
+            >
+              <MapPin className="mr inline-block" /> Al Satwa, Dubai United Arab
+              Emirates
+            </a>
           </div>
           <div className="md:ml-auto font-mono text-xs text-neutral-600">
             &copy; HitBox 2024 All rights reserved.

@@ -9,7 +9,9 @@ export default function Hero({ ...rest }: HeroProps) {
       <div className="w-full flex-1 bg-white" {...rest}>
         <div className="flex w-full h-full px-4 py-20 max-w-screen-xl mx-auto justify-center items-center">
           <div className="flex flex-col gap-4 items-center">
-            <h1 className="md:text-8xl text-6xl font-back-to-1982 ">HitBox</h1>
+            <h1 className="md:text-8xl text-6xl font-back-to-1982 opacity-80">
+              HitBox
+            </h1>
             <h2
               className="text-4xl font-extrabold mt-4 text-transparent bg-clip-text"
               style={{
