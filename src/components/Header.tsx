@@ -25,6 +25,9 @@ export default function Header() {
       <div className="fixed top-0 left-0 w-full -z-[999]">
         <img
           ref={bannerRef}
+          onLoad={(e) => {
+            setMarginTop((e.target as HTMLImageElement).clientHeight)
+          }}
           src="/images/hit-box-banner.webp"
           alt="banner"
           height={'50vh'}
