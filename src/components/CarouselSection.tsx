@@ -1,7 +1,7 @@
 'use client'
 
 /* eslint-disable @next/next/no-img-element */
-import { HTMLProps } from 'react'
+import { HTMLProps, useRef } from 'react'
 const CARDS_SIZE = 5
 
 export default function CarouselSection() {
@@ -125,6 +125,13 @@ const ImageCard: React.FC<ImageCardProps> = ({
   idx,
   ...rest
 }) => {
+  const [minHeight, setMinHeight] = useState<number | null>(null)
+  const ref = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    if (ref.current == null) return
+    setMinHeight(ref.current.clientHeight)
+  }, [ref])
+
   const [currentIndex, setCurrentIndex] = useState(0)
   useEffect(() => {
     if (activeIdx !== idx) return
@@ -146,11 +153,17 @@ const ImageCard: React.FC<ImageCardProps> = ({
   return (
     <AnimatePresence mode="wait">
       <motion.div
+        ref={ref}
         key={currentIndex}
         style={{
           position: 'relative',
           width: '100%',
           overflow: 'hidden',
+          ...(minHeight
+            ? {
+                minHeight,
+              }
+            : {}),
           ...rest.style,
         }}
         className={rest.className}
