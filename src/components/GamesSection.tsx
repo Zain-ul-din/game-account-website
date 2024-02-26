@@ -12,7 +12,7 @@ export default function GameSection({ showAll }: GameSectionProps) {
   const containerRef = useRef<HTMLDivElement | null>(null)
 
   return (
-    <div className="w-full py-16 px-4 bg-white">
+    <div className="w-full py-16 pt-12 px-4 bg-white">
       <div
         className="max-w-screen-xl mx-auto flex flex-col gap-12"
         ref={containerRef}

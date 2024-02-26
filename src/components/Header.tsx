@@ -62,13 +62,16 @@ export default function Header() {
           {/* Links */}
           <div className="flex md:ml-8 gap-4">
             {Object.entries(routes).map(([key, val], i) => {
+              const active = val == path
               return (
                 <Link
                   href={val}
                   key={i}
                   className={cn(
-                    'cursor-pointer font-semibold active:text-black hover:underline decoration-yellow-500 text-sm decoration-wavy underline-offset-4',
-                    val == path ? 'underline' : '',
+                    'cursor-pointer decoration-wavy text-black font-semibold hover:underline text-sm underline-offset-2',
+                    active
+                      ? 'underline decoration-green-500'
+                      : 'opacity-80 hover:scale-105 transition-all hover:decoration-neutral-500',
                   )}
                 >
                   {key}

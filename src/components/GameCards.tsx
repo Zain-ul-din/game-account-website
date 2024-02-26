@@ -85,7 +85,7 @@ export default function GameCards({ containerRef, showAll }: GameCardsProps) {
       {accountGames.map((game, i) => {
         return (
           <a
-            className="flex flex-col cursor-pointer border border-black shadow-gray-300 hover:shadow-gray-400"
+            className="flex flex-col cursor-pointer border border-black shadow-gray-200 hover:shadow-gray-300"
             key={i}
             style={{
               boxShadow: '3px 3px 0px var(--tw-shadow-color)',
