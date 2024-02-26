@@ -47,8 +47,11 @@ export default function Contact() {
             required
           />
           <div className="col-span-1 mt-5 md:col-span-2 flex justify-center">
-            <Button className="text-xl font-light" type="submit">
-              <Send className="mr-2 font-light" />
+            <Button
+              className="text-md font-light flex items-center justify-center"
+              type="submit"
+            >
+              <Send className="mr-2 translate-y-[2px] font-light" size={15} />
               Send
             </Button>
           </div>
