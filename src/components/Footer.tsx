@@ -1,6 +1,7 @@
 import { accountLinks } from '@/lib/constant'
 import { routes } from '@/lib/routes'
 import { Key, Mail, MapPin } from 'lucide-react'
+import Link from 'next/link'
 
 const FooterLinks = {
   'Terms of services': '/',
@@ -76,13 +77,13 @@ export default function Footer() {
         <div className="w-full flex gap-4 md:gap-5 flex-wrap justify-center md:justify-start py-6 md:border-t border-gray-200">
           {Object.entries(FooterLinks).map(([val, link], i) => {
             return (
-              <a
+              <Link
                 key={i}
                 href={link}
                 className="text-gray-800 active:underline hover:underline cursor-pointer"
               >
                 {val}
-              </a>
+              </Link>
             )
           })}
         </div>

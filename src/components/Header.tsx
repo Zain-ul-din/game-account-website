@@ -2,6 +2,7 @@
 
 import { routes } from '@/lib/routes'
 import { cn } from '@/lib/utils'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useRef, useState } from 'react'
@@ -59,7 +60,7 @@ export default function Header() {
           <div className="flex md:ml-8 gap-4">
             {Object.entries(routes).map(([key, val], i) => {
               return (
-                <a
+                <Link
                   href={val}
                   key={i}
                   className={cn(
@@ -68,7 +69,7 @@ export default function Header() {
                   )}
                 >
                   {key}
-                </a>
+                </Link>
               )
             })}
           </div>

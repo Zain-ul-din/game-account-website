@@ -4,14 +4,10 @@ import { Send } from 'lucide-react'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { Textarea } from './ui/textarea'
-import { useRef } from 'react'
-import useScrollTo from '@/lib/hooks/useScrollTo'
 
 export default function Contact() {
-  const ref = useScrollTo<HTMLDivElement>()
-
   return (
-    <div className="w-full py-16 px-4 bg-white" ref={ref}>
+    <div className="w-full py-16 px-4 bg-white">
       <div className="max-w-screen-xl mx-auto flex flex-col gap-12">
         <div>
           <h1 className="text-3xl font-bold">Contact Us</h1>
