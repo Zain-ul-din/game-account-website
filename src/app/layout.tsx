@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <Head>
+      <head>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -61,7 +61,7 @@ export default function RootLayout({
         />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
-      </Head>
+      </head>
       <body
         className={cn(
           `w-full h-full antialiased bg-white`,
