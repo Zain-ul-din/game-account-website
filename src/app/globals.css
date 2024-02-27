@@ -108,3 +108,12 @@ body::-webkit-scrollbar-track {
   50% { transform: translate(-0.5px, -2px); }
   100% { transform: translate(0.5px, -2px); }
 }
+
+@keyframes pan {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}

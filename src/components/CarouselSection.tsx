@@ -33,6 +33,7 @@ export default function CarouselSection() {
             `}</p>
           </div>
         </div>
+
         <div className="max-w-screen-md mx-auto w-full">
           <div
             className="grid grid-cols-4 gap-2"
