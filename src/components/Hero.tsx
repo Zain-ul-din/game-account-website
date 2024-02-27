@@ -9,11 +9,16 @@ export default function Hero({ ...rest }: HeroProps) {
       <div className="w-full flex-1 bg-white" {...rest}>
         <div className="flex w-full h-full px-4 py-20 max-w-screen-xl mx-auto justify-center items-center">
           <div className="flex flex-col gap-4 items-center">
-            <h1 className="md:text-8xl text-6xl font-back-to-1982 opacity-90">
-              HitBox
-            </h1>
-            <h2
-              className="text-4xl font-extrabold mt-4 text-transparent bg-clip-text"
+            <img
+              src="/images/hit-box-logo.webp"
+              alt="logo"
+              style={{
+                borderRadius: '50%',
+              }}
+              className="w-2/5 h-2/5 md:w-2/6 md:h-2/6"
+            />
+            <h1
+              className="md:text-8xl text-6xl font-extrabold opacity-90 text-center"
               style={{
                 background:
                   'linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)',
@@ -21,9 +26,9 @@ export default function Hero({ ...rest }: HeroProps) {
                 WebkitTextFillColor: 'transparent',
               }}
             >
-              GAMES
-            </h2>
-            <p className="text-center">
+              HITBOX GAMES
+            </h1>
+            <p className="text-center text-xl">
               Unending Fun and Thrill! We are offering all in one place.
             </p>
             <div className="flex flex-col self-start mt-9 gap-4">
