@@ -81,3 +81,30 @@ body {
   height: 100%;
 }
 
+/* custom style */
+
+/* Create a small, barely visible scrollbar */
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.2);
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #f1f1f100;
+}
+
+.wiggle {}
+
+.wiggle:hover{ 
+  animation: wiggle-anim 150ms infinite;
+  animation-timing-function: linear;   
+}
+
+@keyframes wiggle-anim {
+  0% { transform: translate(0.5px, -2px); }
+  50% { transform: translate(-0.5px, -2px); }
+  100% { transform: translate(0.5px, -2px); }
+}
