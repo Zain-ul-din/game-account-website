@@ -54,7 +54,6 @@ export const AnimatedTooltip = ({
       50,
       100,
     )
-    console.log(eachImageSize)
     setImageSize({
       width: eachImageSize,
       height: eachImageSize,
