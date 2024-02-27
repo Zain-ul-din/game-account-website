@@ -52,10 +52,10 @@ export default function Header() {
                   href={val}
                   key={i}
                   className={cn(
-                    'cursor-pointer decoration-wavy text-black font-semibold hover:underline text-sm underline-offset-2',
+                    'whitespace-nowrap cursor-pointer decoration-wavy text-black font-semibold hover:underline text-sm underline-offset-2',
                     active
                       ? 'underline decoration-green-500'
-                      : 'opacity-80 hover:scale-105 transition-all hover:decoration-neutral-500',
+                      : 'opacity-80 hover:scale-110 hover:decoration-neutral-500 hover:font-bold wiggle',
                   )}
                 >
                   {key}
