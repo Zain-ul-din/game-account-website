@@ -6,7 +6,7 @@ import { AnimatedTooltip } from './ui/AnimatedTooltip'
 export default function AmazingGames() {
   return (
     <ShowcaseLayout
-      className="py-20"
+      className="py-10 md:py-20"
       props={{
         className: 'justify-center items-center gap-8',
       }}
@@ -30,7 +30,7 @@ export default function AmazingGames() {
 
       <div className="flex w-full flex-col gap-8">
         <h1 className="self-center text-xl">Discover our thrilling games</h1>
-        <div className="flex flex-row items-center md:justify-center mb-10 w-full flex-wrap">
+        <div className="flex gap-1 flex-row items-center md:justify-center mb-10 w-full flex-wrap">
           <AnimatedTooltip
             items={accountGames.map((game, id) => {
               return {

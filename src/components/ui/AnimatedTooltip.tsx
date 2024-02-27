@@ -51,7 +51,7 @@ export const AnimatedTooltip = ({
   useEffect(() => {
     const eachImageSize = clamp(
       (windowSize.width + items.length * 10) / items.length,
-      35,
+      50,
       100,
     )
     console.log(eachImageSize)
@@ -114,7 +114,7 @@ export const AnimatedTooltip = ({
               }}
               src={item.image}
               alt={item.name}
-              className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 border-2 group-hover:scale-105 group-hover:z-30 border-neutral-400 shadow-md  relative transition duration-500"
+              className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 border-2 group-hover:scale-105 group-hover:z-30 border-neutral-200 shadow-md  relative transition duration-500"
             />
           </Link>
         </div>
