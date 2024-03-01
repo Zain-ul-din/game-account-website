@@ -2,6 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 import { HTMLProps, useRef } from 'react'
+
 const CARDS_SIZE = 5
 
 export default function CarouselSection() {
