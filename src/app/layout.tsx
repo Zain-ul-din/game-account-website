@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils'
 import LocalFont from 'next/font/local'
 import { Oxygen } from 'next/font/google'
 import './globals.css'
+import NextTopLoader from 'nextjs-toploader'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -69,6 +70,13 @@ export default function RootLayout({
           backTo1982.variable,
         )}
       >
+        <NextTopLoader
+          speed={100}
+          height={3}
+          crawlSpeed={100}
+          crawl={true}
+          shadow="0 0 50px #2299DD,0 0 50px #2299DD"
+        />
         <Header />
         {children}
         <Footer />
