@@ -80,7 +80,7 @@ export default function RootLayout({
         <h1>No Longer Maintained 🛠</h1>
         {/*<Header />
         {children}
-        <Footer /> *}
+        <Footer /> */}
       </body>
     </html>
   )
