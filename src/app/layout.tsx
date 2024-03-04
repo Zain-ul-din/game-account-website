@@ -77,9 +77,10 @@ export default function RootLayout({
           crawl={true}
           shadow="0 0 50px #2299DD,0 0 50px #2299DD"
         />
-        <Header />
+        <h1>No Longer Maintained 🛠</h1>
+        {/*<Header />
         {children}
-        <Footer />
+        <Footer /> *}
       </body>
     </html>
   )
