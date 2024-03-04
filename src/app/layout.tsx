@@ -77,7 +77,7 @@ export default function RootLayout({
           crawl={true}
           shadow="0 0 50px #2299DD,0 0 50px #2299DD"
         />
-        <h1 className="text-xl font-bold text-red-400">No Longer Maintained 🛠</h1>
+        <h1 className="text-xl font-bold text-red-700">No Longer Maintained 🛠</h1>
         {/*<Header />
         {children}
         <Footer /> */}
