@@ -79,7 +79,7 @@ export default function RootLayout({
         />
         {/* <h1 className="text-xl font-bold text-red-700">No Longer Maintained 🛠</h1> */}
         <Header />
-        {children}
+           {children}
         <Footer /> 
       </body>
     </html>
