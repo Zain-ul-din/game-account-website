@@ -64,7 +64,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          `w-full h-full antialiased bg-white flex flex-col items-center justify-center`,
+          `w-full h-full antialiased bg-white`,
           oxygenRegular.className,
           oxygenRegular.variable,
           backTo1982.variable,
