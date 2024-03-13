@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return <html>
     <body className="bg-black">
-      <p className="red.500">No Longer Maintained!</p>
+      <p className="text-red-500">No Longer Maintained!</p>
     </body>
   </html>
   
