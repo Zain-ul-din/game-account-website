@@ -33,6 +33,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  return <html>
+    <body className="bg-black">
+      <p className="red.500">No Longer Maintained!</p>
+    </body>
+  </html>
+  
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
