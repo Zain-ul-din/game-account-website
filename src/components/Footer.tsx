@@ -4,10 +4,10 @@ import { Key, Mail, MapPin } from 'lucide-react'
 import Link from 'next/link'
 
 const FooterLinks = {
-  'Terms of services': '/',
+  'Terms of services': '/company/privacy',
   'Privacy Policy': '/company/privacy',
   'Our Games': routes.Games,
-  'Other legal Docs': '/',
+  ['AppAds.txt' as keyof typeof routes]: routes['AppAds.txt'],
 }
 
 /* eslint-disable @next/next/no-img-element */

@@ -1,33 +1,18 @@
 'use client'
+/* eslint-disable @next/next/no-img-element */
 
 import { routes } from '@/lib/routes'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-/* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useRef, useState } from 'react'
-import { useWindowSize } from 'usehooks-ts'
 
 export default function Header() {
-  const bannerRef = useRef<HTMLImageElement>(null)
-  const { width, height } = useWindowSize()
-  const [marginTop, setMarginTop] = useState<number>(0)
-
-  useEffect(() => {
-    if (!bannerRef.current) return
-    setMarginTop(bannerRef.current.clientHeight)
-  }, [width, height, bannerRef])
-
   const path = usePathname()
 
   return (
     <>
-      <div className="fixed top-0 left-0 w-full -z-[999]">
+      <div className="w-full">
         <img
-          ref={bannerRef}
-          onLoad={(e) => {
-            setMarginTop((e.target as HTMLImageElement).clientHeight)
-          }}
           src="/images/hit-box-banner.webp"
           alt="banner"
           height={'50vh'}
@@ -43,7 +28,6 @@ export default function Header() {
       <header
         className={`w-full bg-white`}
         style={{
-          marginTop: `${marginTop}px`,
           borderRadius: '1.5rem 1.5rem 0rem 0rem',
         }}
       >
@@ -68,10 +52,10 @@ export default function Header() {
                   href={val}
                   key={i}
                   className={cn(
-                    'cursor-pointer decoration-wavy text-black font-semibold hover:underline text-sm underline-offset-2',
+                    'whitespace-nowrap cursor-pointer decoration-wavy text-black font-semibold hover:underline text-sm underline-offset-2',
                     active
                       ? 'underline decoration-green-500'
-                      : 'opacity-80 hover:scale-105 transition-all hover:decoration-neutral-500',
+                      : 'opacity-80 hover:scale-110 hover:decoration-neutral-500 hover:font-bold wiggle',
                   )}
                 >
                   {key}

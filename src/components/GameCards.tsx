@@ -62,7 +62,7 @@ export default function GameCards({ containerRef, showAll }: GameCardsProps) {
             style={{
               height: `${cardHeight + 1}px`,
               background:
-                'linear-gradient(to bottom, rgba(255,255,255,0.4), white 95%)',
+                'linear-gradient(to bottom, rgba(255,255,255,0), white 70%)',
               pointerEvents: 'none',
             }}
           ></div>

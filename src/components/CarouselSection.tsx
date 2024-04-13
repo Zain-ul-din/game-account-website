@@ -2,6 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 import { HTMLProps, useRef } from 'react'
+
 const CARDS_SIZE = 5
 
 export default function CarouselSection() {
@@ -33,6 +34,7 @@ export default function CarouselSection() {
             `}</p>
           </div>
         </div>
+
         <div className="max-w-screen-md mx-auto w-full">
           <div
             className="grid grid-cols-4 gap-2"
