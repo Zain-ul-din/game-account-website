@@ -5,17 +5,19 @@ import { routes } from '@/lib/routes'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useMediaQuery } from 'usehooks-ts'
 
 export default function Header() {
   const path = usePathname()
-
+  const isSmScreen = useMediaQuery('(max-width: 600px)')
+  
   return (
     <>
       <div className="w-full">
         <img
           src="/images/hit-box-banner.webp"
           alt="banner"
-          height={'50vh'}
+          height={isSmScreen ? '50vh' : '30vh' }
           width={'100%'}
           style={{
             maxHeight: '500px',
