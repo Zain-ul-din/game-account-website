@@ -5,14 +5,30 @@ import { routes } from '@/lib/routes'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useEffect, useRef, useState } from 'react'
+import { useMediaQuery, useWindowSize } from 'usehooks-ts'
 
 export default function Header() {
+  const bannerRef = useRef<HTMLImageElement>(null)
+  const { width, height } = useWindowSize()
+  const [marginTop, setMarginTop] = useState<number>(0)
+
+  useEffect(() => {
+    if (!bannerRef.current) return
+    setMarginTop(bannerRef.current.clientHeight)
+  }, [width, height, bannerRef])
+
   const path = usePathname()
+  const isSmScreen = useMediaQuery('(max-width: 600px)')
 
   return (
     <>
-      <div className="w-full">
+      <div className="fixed top-0 left-0 w-full -z-[999]">
         <img
+          ref={bannerRef}
+          onLoad={(e) => {
+            setMarginTop((e.target as HTMLImageElement).clientHeight)
+          }}
           src="/images/hit-box-banner.webp"
           alt="banner"
           height={'50vh'}
@@ -28,6 +44,7 @@ export default function Header() {
       <header
         className={`w-full bg-white`}
         style={{
+          marginTop: `${marginTop}px`,
           borderRadius: '1.5rem 1.5rem 0rem 0rem',
         }}
       >
