@@ -26,11 +26,12 @@ export default function CarouselSection() {
   return (
     <>
       <div className="flex flex-col w-full bg-white py-6 px-3 gap-12">
-        <div className="flex w-full mx-auto flex-col gap-1 max-w-screen-xl">
+
+        <div className="flex w-full mx-auto flex-col gap-1 max-w-screen-md">
           <div className="flex flex-col gap-1">
             <h1 className="text-3xl font-bold">Glimpse of our games</h1>
-            <p className="text-neutral-700">{`
-              Explore our diverse games designed to captivate a wide audience. Each game promises engaging experiences, leaving a lasting impact on players' memories. Welcome to a world of entertainment that's as diverse as it is thrilling
+            <p className="text-neutral-700 my-2 text-pretty">{`
+              Explore our diverse games designed to captivate a wide audience. Each game promises engaging experiences, leaving a lasting impact on players' memories. Welcome to a world of entertainment that's as diverse as it is thrilling.
             `}</p>
           </div>
         </div>
@@ -177,8 +178,8 @@ const ImageCard: React.FC<ImageCardProps> = ({
           overflow: 'hidden',
           ...(minHeight
             ? {
-                minHeight: setMinH ? minHeight : 'inherit',
-              }
+              minHeight: setMinH ? minHeight : 'inherit',
+            }
             : {}),
           ...rest.style,
         }}
